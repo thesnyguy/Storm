@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Storm Events</title>
+  <script>
+    function openFile() {
+      var year = document.getElementById("year").value;
+      if (year >= 1996 && year <= 2022) {
+        var fileName = "StormEvents" + year + ".html";
+        window.open(fileName, "_blank");
+      } else {
+        alert("Invalid year. Please enter a year between 1996 and 2022.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Storm Events</h1>
+  <p>Please select a year:</p>
+  <input type="number" id="year" min="1996" max="2022">
+  <button onclick="openFile()">Open File</button>
+</body>
+</html>
